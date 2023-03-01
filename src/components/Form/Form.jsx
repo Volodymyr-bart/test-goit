@@ -1,6 +1,6 @@
 import { useLocalStorage } from 'hooks/useLocalStorage';
-// import { useEffect, useState } from 'react';
 import {
+  Logo,
   Box,
   Button,
   Cicle,
@@ -8,6 +8,8 @@ import {
   FormStyled,
   Line,
   Tweets,
+  Image,
+  Avatar,
 } from './Form.styled';
 
 const Form = () => {
@@ -34,10 +36,14 @@ const Form = () => {
 
   return (
     <FormStyled>
+      <Logo />
+      <Image />
       <Box>
-        <Line></Line>
-        <Cicle />
-        <Line></Line>
+        <Line />
+        <Cicle>
+          <Avatar />
+        </Cicle>
+        <Line />
       </Box>
       <Tweets>777 tweets</Tweets>
       <Followers>{visibleFolowers()} Followers</Followers>
